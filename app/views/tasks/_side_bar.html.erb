@@ -1,12 +1,15 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">ユーザー名</a>
+    <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
+  <div class="logout- bar">
+     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
+  </div>
+</div>
   <div class="date-select">
     <label for="deadline">実施日選択</label>
       <a href="#">日付選択</a>
   </div>
-</div>
 
 <div class="side-bar-main">
 
